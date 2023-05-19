@@ -1,0 +1,117 @@
+#shop-details_bandcamb{
+    background: url(..//images/breadcumb_bg_shop_details.png);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: $white-color;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,.5);
+        z-index: -1;
+    }
+    #cursor{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        border: 2px solid $primary-color-2;
+        border-radius: 50%;
+    }
+}
+
+#product_details{
+    
+    padding: 50px 0;
+}
+
+
+.shop_product_small_slider_item.slick-center img{
+    box-shadow: $box-shadow-2;
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+.input-group {
+	width: 20%;
+}
+
+
+.navAndTab_table {
+    margin: 0 0 1.5em;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+
+.navAndTab_table tbody tr td {
+    border: 1px solid black;
+    padding: 9px 12px;
+}
+  
+.navAndTab_table tbody tr th {
+    border: 1px solid black;
+    padding: 9px 12px;
+}
+  
+
+
+
+
+#product_description_review{
+    padding: 50px 0;
+}
+
+
+
+
+
+
+
+
+
+// pop up design sectioin 
+
+ #popup{
+   display: none;
+} 
+#popup{
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999999999999999999999999;
+}
+#popup .popup_container{
+    background-color: $primary-color-1;
+}
+#popup .popup_container .info{
+    position: relative;
+}
+#popup .popup_container .info .hide_btn{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+ 

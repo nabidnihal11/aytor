@@ -1,0 +1,39 @@
+
+
+#shop_bandcamb{
+    background: url(..//images/breadcumb_bg_shop.png);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    z-index: 1;
+    color: $white-color;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,.5);
+        z-index: -1;
+
+    }
+}
+
+
+#products{
+    padding: 50px 0;
+    .shop_list{
+        padding: 20px 15px;
+        margin: 40px 0;
+        box-shadow: $box-shadow-1;
+    }
+}
+
+.product{
+    @extend %product_item_style;
+    margin: 40px 20px;
+}
+
+
+
+

@@ -1,0 +1,314 @@
+
+
+#bandcamb{
+    background: url(..//images/breadcumb_bg_about.png);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    z-index: 1;
+    position: relative;
+    color: $white-color;
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+}
+
+
+#about_shop{
+    margin: 50px 0;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+    .about_img{
+        position: relative;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            border: 14px solid #BDBDBD;
+            width: 284px;
+            height: 313px;
+            z-index: -1;
+            bottom: 0;
+            left: -46px;
+            animation: moving 5s linear alternate infinite;
+        }
+    }
+    .about_shape{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color:$bg-color;
+        height: 100%;
+        width: calc(100% - 110px);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+        z-index: -1;
+    }
+}
+@keyframes moving{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(46px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+#our_story{
+    background-color: $bg-color;
+    position: relative;
+    height: 520px;
+    padding: 20px;
+    .story_content{
+        position: absolute;
+        inset: 0 0 0 50%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        a i{
+            color: $primary-color-1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: $white-color;
+            z-index: 999;
+            box-shadow: $box-shadow-2;
+            &::after{
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: $white-color;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                animation: pulse 2s infinite alternate linear;
+            }
+        }
+        .overlay{
+            position: absolute;
+            inset: 0;
+            .front{
+                width: 100%;
+                height: 0%;
+                background-color: #ffffff71;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: 2s ease;
+            }
+            .back{
+                width: 0%;
+                height: 100%;
+                background-color: #ffffff71;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                transition: 2s ease;
+            }            
+        }
+        &:hover .front{
+            height: 100%;
+            opacity: 0;
+        }
+        &:hover .back{
+            width: 100%;
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#promotion{
+    margin: 30px 0;
+    color: $primary-color-1;
+    
+    .promotion_item{
+        background-color: #fff;
+        box-shadow: 0px 0px 50px rgba(21, 26, 50, 0.1);
+        padding: 20px 30px;
+    }
+}
+
+#testimonial{
+    margin: 50px 0;
+    position: relative;
+    img{
+        border-radius: 50%;
+    }
+
+}
+
+.testimonial_slider p{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.test_animate_slider {
+    position: sticky;
+}
+.test_animate_slider .slick-list.draggable{
+    position: sticky;
+    overflow: visible;
+    transform: initial;
+}
+.test_animate_slider .slick-track {
+    position: static;
+    overflow: visible;
+    transform: initial !important;
+}
+
+.test_animate_slider .test_animate_slider_item{
+    position: absolute;
+    z-index: 999999999999999;
+    animation: 5s anime infinite linear alternate;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(1) {
+	left: 250px;
+	bottom: 69px;
+	width: 60px !important;
+	height: 60px !important;
+	animation-delay: 1s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(2) {
+	left: 50px;
+	top: -51px;
+	width: 70px !important;
+	height: 70px !important;
+	animation-delay: 1.2s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(3) {
+	right: 288px;
+	top: -23px;
+	width: 50px !important;
+	height: 50px !important;
+	animation-delay: .5s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(4) {
+	right: 0;
+	bottom: 90px;
+	width: 40px !important;
+	height: 40px !important;
+	animation-delay: 1.4s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(5) {
+	left: 130px;
+	bottom: 150px;
+	width: 62px !important;
+	height: 62px !important;
+	animation-delay: 1.4s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(6){        
+    top: -200px;
+    right: 150px;
+    width: 60px !important;
+    height: 60px !important;
+    animation-delay: 1s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(7){        
+    left: 200px;
+    bottom: 40px;
+    width: 44px !important;
+    height: 44px !important;
+    animation-delay: 1s;
+}
+
+.test_animate_slider .test_animate_slider_item:nth-child(8) {
+	top: -46px;
+	right: 90px;
+	width: 40px !important;
+	height: 40px !important;
+	animation-delay: 1.6s;
+}
+
+@keyframes anime{
+    0%{
+        transform: translate(0%, 0%);
+    }
+    50%{
+        transform: translate(30%, 20%);
+    }
+    100%{
+        transform: translate(15%, 10%);
+    }
+}
+
+
+#instagram{
+    padding: 50px 0;
+    h3{
+        text-align: center;
+    }
+    .instagram_slider_item{
+        position: relative;
+        margin-right: 10px;
+        .overlay{
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            transition: 0.68s;
+            transform: scale(0);
+            i{
+                font-size: 20px;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+        &:hover .overlay{
+            transform: scale(1);
+        }
+    }
+
+}
+
+
+#footer{
+    background: $background-color;
+    padding: 40px 0;
+}
+
+
+
+
+
+

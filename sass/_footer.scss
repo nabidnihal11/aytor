@@ -1,0 +1,29 @@
+footer{
+    background: url(..//images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    color: $white-color;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(5, 0, 0, 0.75);
+        z-index: -1;
+    }
+    #promotion{
+        transform: translateY(-50%);
+        color: $primary-color-1;
+        
+        .promotion_item{
+            background-color: #fff;
+            box-shadow: 0px 0px 50px rgba(21, 26, 50, 0.1);
+            padding: 20px 30px;
+        }
+    }
+    
+}
+
+
+

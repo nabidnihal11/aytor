@@ -1,0 +1,14 @@
+#banner
+{
+    padding: 0 30px;
+    .banner_slider_item{
+        height: 700px;
+        background-size: cover !important;
+        background-position: center !important;
+        h4, h1, p, a {
+            color: $white-color;
+        }
+    }
+    
+
+}
