@@ -3,9 +3,7 @@
     background-size: cover;
     background-position: center;
     height: 400px;
-    cursor: none;
     position: relative;
-    overflow: hidden;
     z-index: 1;
     color: $white-color;
     &::after{
@@ -14,14 +12,6 @@
         inset: 0;
         background: rgba(0,0,0,.5);
         z-index: -1;
-    }
-    #cursor{
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 30px;
-        height: 30px;
-        border: 2px solid $primary-color-2;
-        border-radius: 50%;
     }
 }
 
@@ -86,9 +76,9 @@
 
 // pop up design sectioin 
 
- #popup{
-   display: none;
-} 
+//  #popup{
+//    display: none;
+// } 
 #popup{
     position: fixed;
     width: 100%;

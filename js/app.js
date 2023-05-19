@@ -1,23 +1,9 @@
 $(function(){
     'use strict';
 
-
-
     $('.hide_btn').on('click', function () {
       $('#popup').hide()
     });
-
-
-    var cursor = getElementById('cursor');
-
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
-      cursor.style.left = x+"px";
-      cursor.style.top = y+"px";
-    
-    });
-
 
 })
 
