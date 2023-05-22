@@ -1,0 +1,25 @@
+#contact_bandcamb{
+    background: url(..//images/breadcumb_bg_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+    color: $white-color;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: -1;
+    }
+}
+
+
+#get_in_touch{
+    button{
+        padding: 15px 20px !important;
+        margin: 20px auto;
+    }
+}

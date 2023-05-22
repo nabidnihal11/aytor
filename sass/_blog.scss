@@ -1,0 +1,57 @@
+#blog_bandcamb{
+    background: url(..//images/breadcumb_bg_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+    color: $white-color;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+}
+
+#blog{
+    padding: 100px 0;
+    .blog_main_content{
+        padding: 20px;
+    }
+    .blog_main_item{
+        box-shadow: $box-shadow-1;
+        margin: 30px 0;
+        .blog_main_item_img{
+            position: relative;
+            .overlay i{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 99;
+                color: $primary-color-1;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $white-color;
+                z-index: 999;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: $white-color;
+                    border-radius: 50%;
+                    z-index: -1;
+                    animation: pulse 1s infinite alternate linear;
+                }
+            }
+        }
+        
+    }
+}

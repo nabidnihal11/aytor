@@ -1,0 +1,36 @@
+#cart_bandcamb{
+    background: url(..//images/breadcumb_bg_cart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    z-index: 1;
+    color: $white-color;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+}
+
+#product_cart{
+    padding: 100px 0;
+    tr,td{
+        border: 1px dotted $gray-color;
+    }
+    th{
+        background-color: $gray-color;
+        
+    }
+    .cart_total{
+        margin: 50px 0;
+        
+    }
+}
+
+
+
+

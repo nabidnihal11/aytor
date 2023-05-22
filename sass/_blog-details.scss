@@ -1,0 +1,63 @@
+#blog_details_bandcamb{
+    background: url(..//images/breadcumb_bg_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+    color: $white-color;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: -1;
+    }
+}
+
+
+#blog{
+    .blog_main_content_quote{
+        padding: 20px 15px;
+        background: $gray-color;
+        color: $bg-color;
+        margin: 10px 0;
+    }
+    .blog_main_content_text{
+        margin: 20px 0;
+        p{
+            text-align: justify;
+        }
+    }
+    .blog_author{
+        padding: 10px 20px;
+        background: $gray-color;
+        .author_img img{
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .blog_leave_reply_form{
+        padding: 20px;
+        box-shadow: $box-shadow-2;
+        margin-top: 50px;
+        .form-group{
+            margin: 10px 0;
+            input{
+                padding: 20px 10px;
+            }
+            textarea{
+                padding: 10px 10px 100px;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+

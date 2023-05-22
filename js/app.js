@@ -1,11 +1,35 @@
 $(function(){
     'use strict';
 
+
+
+    // news letter hide 
+    
     $('.hide_btn').on('click', function () {
       $('#popup').hide()
     });
 
+
+
+
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // bootstrap toolkit 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -13,7 +37,6 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
-
 
 
 // menu scroll 
@@ -29,11 +52,11 @@ $(function () {
       }
 
 
-      // if (scrollSize > 500) {
-      //     $('#navigation').addClass('active')
-      // } else {
-      //     $('#navigation').removeClass('active')
-      // }
+      if (scrollSize > 500) {
+          $('#navigation').addClass('active')
+      } else {
+          $('#navigation').removeClass('active')
+      }
   })
 }) 
 
@@ -58,6 +81,7 @@ $('.banner_slider').slick({
     dots:true,
     fade:true,
     pauseOnHover: false,
+    dotsClass: 'banner_slider_dots',
 });
 
 
@@ -90,6 +114,15 @@ $('.blog_slider').slick({
   arrows: false,
 })
 
+
+
+// blog_main_slider slider 
+$('.blog_main_slider').slick({
+  slidesToShow: 1,
+  autoplay: true,
+  arrows: false,
+  pauseOnHover: false,
+})
 
 
 // team slider 
@@ -201,8 +234,6 @@ $("#deals_timer").countdown("2023/12/31", function (event) {
 
 
 
-// cursor pointer 
-
 
 
 
@@ -212,23 +243,46 @@ $("#deals_timer").countdown("2023/12/31", function (event) {
 
 // product count plus minus 
 
-let cart_value = document.getElementById("cart_value");
-let minusBtn = document.getElementById("cart_minus");
 
-function cartMinus(btn_id) {
-    if (cart_value.value < 2) {
-        document.getElementById(btn_id).setAttribute("disabled", true);
+function cartMinus() {
+
+  let btn = document.getElementById('cart_minus');
+  let input = document.getElementById('cart_value');
+
+
+  btn.addEventListener('click', function(){
+    if (input.value < 2) {
+      btn.setAttribute('disabled', true);
     } else {
-        cart_value.value--;
+      input.value--;
     }
+  })
 }
+
+cartMinus()
 
 function cartPlus() {
-    cart_value.value++;
-    if (cart_value.value > 1) {
-      minusBtn.removeAttribute('disabled');
+
+  let btn = document.getElementById('cart_plus');
+  let input = document.getElementById('cart_value');
+
+
+  btn.addEventListener('click', function(){
+    input.value++;
+    if (input.value > 0) {
+      document.getElementById('cart_minus').removeAttribute('disabled');
     }
+  })   
 }
+cartPlus()
+
+
+
+
+
+
+
+
 
 
 
@@ -250,8 +304,4 @@ new VenoBox({
 
 
 
-// pop up 
-// $('.hide_btn').on('click', function () {
-//   $('#popup').hide()
-// })
 

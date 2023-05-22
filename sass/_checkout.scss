@@ -1,0 +1,26 @@
+#checkout_bandcamb{
+    background: url(..//images/breadcumb_bg_checkout.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+    color: $white-color;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+}
+
+
+
+#coupon{
+    padding: 100px 0;
+    tr,td,th{
+        border: 1px dashed $gray-color;
+    }
+}

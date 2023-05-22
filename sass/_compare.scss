@@ -1,0 +1,33 @@
+#compare_bandcamb{
+    background: url(..//images/breadcumb_bg_compare.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 400px;
+    color: $white-color;
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+    }
+}
+
+
+
+
+
+#compare_product{
+    padding: 50px 0;
+    table{
+        width: 100%;
+        border: 1px dotted black;
+        tr , td{
+            border: 1px dotted black;
+            padding: 10px;
+        }
+    }
+}
