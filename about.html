@@ -9,7 +9,7 @@
     <!-- google fonts link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
 
     <!-- logo linked with title of the page -->
     <link rel="icon" href="./images/Logo.png">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/slick.css">
 
     <!-- venubox css link  -->
-    <link rel="stylesheet" href="./css/venobox.min.css" media="screen">
+    <link rel="stylesheet" href="./css/venobox.min.css">
 
     <!-- aos css link  -->
     <link rel="stylesheet" href="./css/aos.css">
@@ -39,32 +39,70 @@
 
 <body>
 
- <!-- PopUp Newsletter Section Start -->
- <section id="popup">
-    <div class="container">
-       <div class="row justify-content-center text-center">
-          <div class="col-lg-8 align-items-center popup_container">
-             <div class="info">
-                <i class="fa-solid fa-xmark hide_btn"></i>
-                <h2>Newsletter</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque eos ducimus vitae magni,c! Iusto
-                   quas obcaecati quibusdam placeat totam qui quaerat repudiandae velit suscipit?</p>
-                <form action="" class="d-flex flex-wrap justify-content-center mb-5">
-                   <input class="email" type="email" placeholder="Enter Your Email.." required="">
-                   <button type="submit">Subscribe</button>
-                </form>
-                <div class="form-check check_box">
-                   <input class="text-center" type="checkbox" class="form-check-input" id="exampleCheck1">
-                   <label class="form-check-label" for="exampleCheck1">Don't Show This Popup Again</label>
-                </div>
-             </div>
-             <img src="./images/popup-banner-1.png" alt="" class=" img-fluid">
-          </div>
-       </div>
+
+<!-- preloader section starts here -->
+
+<section id="preloader">
+    <button id="cancel_preloader">Cancel Preloader</button>
+    <div class="preloder_load">
+        <img src="./images/Logo.png" alt="" />
+        <div class="preloader_item">
+            <span class="preloader_item_1"></span>
+            <span class="preloader_item_2"></span>
+            <span class="preloader_item_3"></span>
+        </div>
     </div>
- </section>
+</section>
+
+<!-- preloader section ends  -->
+
+
+
+ <!-- PopUp Newsletter Section Start -->
+
+<section id="popContainer" class="popcontainer">
+    
+    <section id="popup">
+       
+       <div class="align-items-center popup_container">
+                <div class="info">
+                   <i class="fa-solid fa-xmark hide_btn"></i>
+                   <h2>Newsletter</h2>
+                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque eos ducimus vitae magni,c! Iusto
+                      quas obcaecati quibusdam placeat totam qui quaerat repudiandae velit suscipit?</p>
+                   <form action="" class="d-lg-flex flex-wrap justify-content-center mb-5">
+                      <input class="email" type="email" placeholder="Enter Your Email.." required="">
+                      <button type="submit">Subscribe</button>
+   
+                   </form>
+                   <div class="form-check check_box text-center">
+                      <input class="text-center" type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Don't Show This Popup Again</label>
+                   </div>
+                </div>
+                <img src="./images/popup-banner-1.png" alt="" class=" img-fluid">
+             </div>
+         
+    </section>
+   
+</section>
+
  <!-- PopUp Newsletter Section End -->
 
+ 
+ <!-- search section      -->
+  
+ <section id="search-box">
+    <button id="search-close">
+        <i class="fas fa-times"></i>
+    </button>
+    <div>
+        <input type="search" placeholder="search">
+        <button type="submit">Search</button>
+    </div>
+</section>
+
+<!-- saearch section  -->
 
 <!-- header section starts here  -->
 <header>
@@ -73,8 +111,8 @@
             <div class="col-lg-6">  
                 <p> <i class="fa-regular fa-paper-plane"></i> FREE SHIPING world wide for all orders over <span>$150</span></p>
             </div>
-            <div class="col-lg-6">
-                <ul class="d-flex">
+            <div class="col-lg-6 ">
+                <ul class="d-flex justify-content-end">
                     <li><a href="#">Track Your Order</a></li>
                     <li class="nav-item">
                         <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">English<i class="fa-solid fa-chevron-down"></i></a>
@@ -93,7 +131,7 @@
                         </ul>
                     </li>
                     <li>
-                        <ul class="d-flex">
+                        <ul class="d-flex social_icon">
                             <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
@@ -143,46 +181,33 @@
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="shop.html">Shop</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">Page 2</a>
                             <ul>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="#">Blog2</a></li>
-                                
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="shop-details.html">Shop Details</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">Page 3</a>
                             <ul>
-                                <li><a href="shop.html">Shop</a></li>
+                                
                                 <li><a href="wishlist.html">Wishlist</a></li>
                                 <li><a href="cart.html">Cart Page</a></li>
                                 <li><a href="compare.html">Compare</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Page 4</a>
-                            <ul>                                
-                                <li><a href="#">Feature1</a></li>
-                                <li><a href="#">Feature2</a></li>
-                                <li><a href="#">Feature3</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="error.html">Error Page</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" data-bs-toggle="dropdown">Features
-                        <span><i class="fa-solid fa-chevron-down"></i></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Feature 1</a></li>
-                        <li><a href="#">Feature 2</a></li>
-                        <li><a href="#">Feature 3</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="feature.html">Features</a>
                 </li>
                 
                 <li class="nav-item dropdown">
@@ -191,16 +216,16 @@
                     </a>
                     <ul class="dropdown-menu">
                   <li><a href="blog.html">Blog</a></li>
-                  <li><a href="#">Blog2</a></li>
+                  <li><a href="blog-details.html">Blog Details</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
             <div class="nav_icon_menu d-flex">
                 <ul class="navbar-nav mx-auto">
-                    <li><i class="fa fa-search"></i></li>
+                    <li id="search_bar"><i class="fa fa-search"></i></li>
                     <li><i class="fa fa-user"></i></li>
                     <li><i class="fa fa-heart"></i></li>
                     <li><i class="fa fa-bag-shopping"></i><span>2</span></li>
@@ -227,9 +252,9 @@
 <section id="bandcamb">
     <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center">
-            <div class="col-lg-2 text-center">
+            <div class="col-3 text-center">
                 <h2>About Us</h2>
-                <p><span>Home</span> / About Us</p>
+                <p>Home / About Us</p>
             </div>
         </div>
     </div>
@@ -245,23 +270,24 @@
                     <img src="./images/about_shop.png" alt="" class="img-fluid">
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div class="about_shop_content">
                     <h2>Learn About Aetor Shop</h2>
                     <p>Interactively underwhelm effective relationships whereas team driven paradigms. 
                         Uniquely impact impactful meta-services vis -a-vis fully tested best practices. Appropriately e-enable fully.</p>
+                    <hr>
                     <ul>
-                        <li><img src="./images/Vector.png" alt=""> Assertively customize robust potentialities and economical</li>
-                        <li><img src="./images/Vector.png" alt=""> Assertively customize robust potentialities and economical</li>
-                        <li><img src="./images/Vector.png" alt=""> Assertively customize robust potentialities and economical</li>
+                        <li><img src="./images/Vector.png" alt="" class="img-fluid"> Assertively customize robust potentialities and economical.</li>
+                        <li><img src="./images/Vector.png" alt="" class="img-fluid"> Seamlessly disintermediate distributed intellectual capital.</li>
+                        <li><img src="./images/Vector.png" alt="" class="img-fluid"> Credibly enable B2C potentialities after strategic.</li>
                     </ul>
-                    <button>
+                    <button class="anchor_design">
                         Discover More <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
+            <div class="about_shape"></div>
         </div>
-        <div class="about_shape"></div>
     </div>
 </section>
 
@@ -271,26 +297,42 @@
 
 <section id="achievement">
     <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-lg-2">
-                <img src="./images/package 1 (Traced).png" alt="" class="img-fluid"><br>
-                <span class="counter">22000</span>
-                <p>Products for sale</p>
+        <div class="row justify-content-between text-center">
+            <div class="col-3">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <div class="counter">
+                    <p class="counting_number">
+                        3000
+                    </p>
+                </div>
+                <small>Products for sale</small>
             </div>
-            <div class="col-lg-2">
-                <img src="./images/package 1 (Traced).png" alt="" class="img-fluid"><br>
-                <span class="counter">22000</span>
-                <p>Products for sale</p>
+            <div class="col-3">
+                <i class="fa-solid fa-shop"></i>
+                <div class="counter">
+                    <p class="counting_number">
+                        3000
+                    </p>
+                </div>
+                <small>Sellers active on shop</small>
             </div>
-            <div class="col-lg-2">
-                <img src="./images/package 1 (Traced).png" alt="" class="img-fluid"><br>
-                <span class="counter">25000</span>
-                <p>Products for sale</p>
+            <div class="col-3">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="counter">
+                    <p class="counting_number">
+                        3000
+                    </p>
+                </div>
+                <small>Customer active on store</small>
             </div>
-            <div class="col-lg-2">
-                <img src="./images/package 1 (Traced).png" alt="" class="img-fluid"><br>
-                <span class="counter">20000</span>
-                <p>Products for sale</p>
+            <div class="col-3">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <div class="counter">
+                    <p class="counting_number">
+                        3000
+                    </p>
+                </div>
+                <small>Annual gross sales</small>
             </div>
         </div>
     </div>
@@ -304,12 +346,15 @@
 <section id="our_story">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <h2>Our Story</h2>
-                <p>Synergistically pontificate focused services whereas intuitive leadership. Competently predominate ubiquitous services rather than client-centric scenarios. Distinctively mesh B2C benefits for superior customer service. Interactively e-enable inexpensive total linkage without quality materials. Phosfluorescently negotiate.</p>
+            <div class="col-lg-6 col-md-6 col-sm-12 ">
+                <div class="story_details">
+                    <h2>Our Story</h2>
+                <p>Synergistically pontificate focused services whereas intuitive leadership. Competently predominate ubiquitous services rather than client-centric scenarios. Distinctively mesh B2C benefits for superior customer service. Interactively e-enable inexpensive total linkage without quality materials. Phosfluorescently negotiate.</p> <br>
                 <p>Professionally exploit user-centric technology for seamless solutions. Objectively morph unique strategic theme areas without cross functional mindshare. Synergistically aggregate adaptive functionalities rather than enterprise-wide experiences. Completely maintain.</p>
+            
+                </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="story_content">
                     <img src="./images/our_story.jpg" class="img-fluid" alt="">
                     <a  class="my-video-links" data-autoplay="true" data-vbtype="video" href="https://youtu.be/ffAtzSvVcAg">
@@ -332,53 +377,58 @@
 <!-- promotion nsection starts  -->
 
 <section id="promotion">
-    <div class="container">
-        <div class="row">
-            <div class="promotion_item col-lg-3 d-flex align-items-center">
-                <img src="./images/Ellipse 12.jpg" alt="" class="position-relative img-fluid">
-                <img src="./images/delivery-truck 1 (Traced).png" alt="" class="position-absolute img-fluid">
-                <div class="promotion_intro">
+    <div class="container promotion_section">
+        <div class="row order_item">
+            <div class="promotion_item col-lg-3 col-sm-10 g-0 row align-items-center">
+                <div class="promotion_item_content col-2">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="promotion_intro col-10">
                     <h4>Free Shipping</h4>
-                    <p>All orders over $150</p>
+                    <p>All orders over <span>$150</span></p>
                 </div>
             </div>
-            <div class="promotion_item col-lg-3 d-flex align-items-center">
-                <img src="./images/Ellipse 12.jpg" alt="" class="position-relative img-fluid">
-                <img src="./images/delivery-truck 1 (Traced).png" alt="" class="position-absolute img-fluid">
-                <div class="promotion_intro">
-                    <h4>Free Shipping</h4>
-                    <p>All orders over $150</p>
+            <div class="promotion_item col-lg-3 col-sm-10  g-0 row align-items-center">
+                <div class="promotion_item_content col-2">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="promotion_intro col-10">
+                    <h4>QUICK PAYMENT</h4>
+                    <p>100% secure payment</p>
                 </div>
             </div>
-            <div class="promotion_item col-lg-3 d-flex align-items-center">
-                <img src="./images/Ellipse 12.jpg" alt="" class="position-relative img-fluid">
-                <img src="./images/delivery-truck 1 (Traced).png" alt="" class="position-absolute img-fluid">
-                <div class="promotion_intro">
-                    <h4>Free Shipping</h4>
-                    <p>All orders over $150</p>
+            <div class="promotion_item col-lg-3 g-0 col-sm-10 row align-items-center">
+                <div class="promotion_item_content col-2">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="promotion_intro col-10">
+                    <h4>FREE RETURNS</h4>
+                    <p>Return money within 30 days</p>
                 </div>
             </div>
-            <div class="promotion_item col-lg-3 d-flex align-items-center">
-                <img src="./images/Ellipse 12.jpg" alt="" class="position-relative img-fluid">
-                <img src="./images/delivery-truck 1 (Traced).png" alt="" class="position-absolute img-fluid">
-                <div class="promotion_intro">
-                    <h4>Free Shipping</h4>
-                    <p>All orders over $150</p>
+            <div class="promotion_item col-lg-3 col-sm-10 g-0 row align-items-center">
+                <div class="promotion_item_content col-2">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="promotion_intro col-10">
+                    <h4>24/7 SUPPORT</h4>
+                    <p>Quick Support</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- promotion section ends here  -->
 
 <!-- team section  -->
 <section id="team">
-    <div class="container">
+    <div class="container team_container">
+        <i class="fa-solid fa-arrow-left team_left"></i>
+        <i class="fa-solid fa-arrow-right team_right"></i>
         <h2 class="text-center">Leadership Expart Team</h2>
         <div class="team_slider">
             <div class="team_slider_item">
-                <img src="./images/team_1.jpg" alt="" class="img-fluid">
+                <img src="./images/team_1.jpg" alt="" class="img-fluid overflow-hidden">
                 <h6>Michel Richard</h6>
                 <p>Founder</p>
                 <span>
@@ -635,34 +685,38 @@
 
 
 <!-- footer section starts here  -->
+
 <section id="footer">
     <div class="container">
         <div class="footer_top">
             <div class="row justify-content-between">
-                <div class="col-lg-6">
+                <div class="col-lg-5 col-md-6">
                     <h2>Subscribe to Our Newsletter!</h2>
                     <p>Authoritatively morph 24/7 potentialities with error-free partnerships. Objectively engineer multimedia.</p>
                 </div>
-                <div class="col-lg-3">
-                    <input type="text" placeholder="enter your email">
-                    <button>subscribe</button>
+                <div class="col-lg-4 col-md-6">
+                    <input type="text" placeholder="Enter your email....">
+                    <button class="anchor_design">subscribe</button>
+                    
                 </div>
             </div>
             
         </div>
         <div class="footer_info">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-3">
-                    <img src="./images/Logo.png" alt="" class="img-fluid">
-                    <p>Progressively optimize effective ideas before turnkey process improvements. Proactively disseminate</p>
-                    <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-pinterest"></i>
+                    <a href="index.html"><img src="./images/Logo.png" alt="" class="img-fluid footer_logo"></a>
+                    <p class="footer_info_first_p">Progressively optimize effective ideas before turnkey process improvements. Proactively disseminate</p>
+                    <ul class="d-flex footer_info_icon">
+                        <li><a href="#" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a></li>
+                        <li><a href="#" target="_blank"> <i class="fa-brands fa-twitter"></i> </a></li>
+                        <li><a href="#" target="_blank"> <i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"> <i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
                 </div>
                 <div class="col-lg-2">
                     <h3>My Account</h3>
-                    <ul>
+                    <ul class="foot_info_li">
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> My Account</a></li>
                         <li><a href="cart.html"><i class="fa-solid fa-angle-right"></i> View Cart</a></li>
                         <li><a href="wishlist.html"><i class="fa-solid fa-angle-right"></i> Wishlist</a></li>
@@ -672,7 +726,7 @@
                 </div>
                 <div class="col-lg-2">
                     <h3>Support</h3>
-                    <ul>
+                    <ul class="foot_info_li">
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> Help</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> Feedback</a></li>
@@ -681,23 +735,14 @@
                     </ul>
                 </div>
                 <div class="col-lg-2">
-                    <h3>Opening Time</h3>
-                    <div class="d-flex">
-                        <div class="date">
-                            <p>MOn-Tue:</p>
-                            <p>Wed:</p>
-                            <p>Fri:</p>
-                            <p>Sat:</p>
-                            <p>Sun:</p>
-                        </div>
-                        <div class="time">
-                            <p>8AM - 10PM</p>
-                            <p>8AM - 7PM</p>
-                            <p>7AM - 12PM</p>
-                            <p>9AM - 8PM</p>
-                            <p>Closed</p>
-                        </div>
-                    </div>
+                    <h3>Shop</h3>
+                    <ul class="foot_info_li">
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Men’s Shopping</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Women’s Shopping</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Kids’ Shopping</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Discounts</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> New Arrivels</a></li>
+                    </ul>
                 </div>
                 <div class="col-lg-3">
                     <h3>Contact us</h3>
@@ -730,10 +775,11 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-        <div class="footer_last">
+    </div>
+    <div class="footer_last">
+        <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-4">
                     <p>© 2022 All Rights Reserved <a href="#">Aytor</a> By <a href="#">Angfuzsoft</a>.</p>
@@ -762,14 +808,15 @@
 
 <!-- js files link  -->
 
-    <!-- <script src="./js/jquery-1.12.4.min.js"></script> -->
-    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- <script src="./js/jquery-3.6.4.min.js"></script> -->
     <script src="./js/slick.min.js"></script>
     <script src="./js/jquery.countdown.min.js"></script>
     <script src="./js/aos.js"></script>
-    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/waypoints.min.js"></script>
     <script src="./js/jquery.counterup.min.js"></script>
-    <script src="./js/venobox.esm.js"></script>
+    <script src="./js/venobox.min.js"></script>
+
     <script src="./js/bootstrap.min.js"></script>
 
     <!-- main js file  -->

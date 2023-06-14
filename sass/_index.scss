@@ -1,3 +1,217 @@
+#preloader{
+    background: $white-color;
+    position: fixed;
+    z-index: 9999999999999999999999999999999;
+    inset: 0;
+    button{
+        color: $primary-color-3;
+        background-color: $background-color;
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .preloder_load{
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            margin-bottom: 20px;
+        }
+        .preloader_item {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ff5645;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-right-color: rgba(0, 0, 0, 0);
+            border-bottom-color: rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 5px 0px rgba(21, 26, 50, .75);
+            border-radius: 50%;
+            position: relative;
+            animation: preloader_animate 1s ease-out infinite;
+            span{
+                display: block;
+                position: absolute;
+                border: 2px solid #ff5645;
+                border-color: rgba(0, 0, 0, 0);
+                border-radius: 50%;
+                color: #ff5645;
+            }
+            .preloader_item_1{
+                width: 50px;
+                height: 50px;
+                inset: 0;
+            }
+        }
+    }
+}
+
+.preloader_item_2 {
+    width: 35px;
+    height: 35px;
+    inset: 7px;
+    animation-name: preloader;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes preloader {
+    0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(0) rotateX(360deg);
+}
+}
+
+#preloader .preloder_load .preloader_item_3 {
+    width: 20px;
+    height: 20px;
+    inset: 15px;
+}
+
+
+@keyframes preloader_animate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+// pop up design sectioin 
+
+#popContainer{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    inset: 0;
+    z-index: 999999999999;
+}
+#popup{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 99999999999999999999999999999;
+     color: $white-color;
+     display: none;
+     button{
+        cursor: pointer;
+        padding: 10px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $white-color;
+        background-color: $primary-color-3;
+        margin-left: 30px;
+        border: none;
+        overflow: hidden;
+        transition: 0.5s;
+        &:hover{
+            color: $primary-color-1;
+            background-color: $white-color;
+            letter-spacing: 1px;
+            box-shadow: $box-shadow-2;
+        }
+     }
+     .email{
+        width: 50%;
+        padding: 10px;
+     }
+
+     h2{
+        margin-top: 40px;
+       
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        line-height: 46px;
+     }
+     p{
+       text-align: center;
+        font-size: 16px;
+        margin: 15px 50px 30px;
+     }
+}
+ #popup .popup_container{
+     background-color: $primary-color-1;
+ }
+ #popup .popup_container .info{
+     position: relative;
+ }
+ #popup .popup_container .info .hide_btn{
+     position: absolute;
+     right: 0;
+     top: -20px;
+     font-size: 20px;
+     height: 30px;
+     width: 30px;
+     color: $white-color;
+     border-radius: 50%;
+     line-height: 30px;
+     background-color: $primary-color-3;
+     text-align: center;
+     cursor: pointer;
+}
+
+
+
+
+// search section 
+
+#search-btn{
+    
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+#search-box{
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) skew(10deg) rotate(40deg);
+    z-index: 999999999999999999999999999999999999999999999999999;
+}
+
+#search-box.show{
+    transform: scale(1) skew(0deg) rotate(0deg);
+    transition: 0.6s;
+}
+
+#search-box #search-close{
+    position: absolute;
+    padding: 10px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: $primary-color-1;
+}
+
+// search section 
+
+
+
+
+
+
+// feature section 
+
 #features{
     padding: 30px 0;
     .features_img
@@ -5,7 +219,7 @@
         position: relative;
         &:hover .overlay
         {
-            transform: scale(1);
+            transform: scale(1) rotate(0deg);
         }
         .overlay{
             position: absolute;
@@ -14,7 +228,27 @@
             color: $white-color;
             text-align: center;
             transition: 0.5s;
-            transform: scale(0);
+            transform: scale(0) rotate(45deg);
+            h6{
+                font-weight: 700;
+                font-size: 30px;
+                padding-bottom: 12px;
+            }
+            a{
+                font-weight: 500;
+                font-size: 16px;
+                color: $white-color;
+                transition: 0.5s;
+                i{
+                    margin-left: 5px;
+                    font-size: 12px;
+                }
+                &:hover{
+                    color: $primary-color-1;
+                    border-bottom: 1px solid $primary-color-1;
+                }
+            }
+            
         }
     }
     
@@ -22,21 +256,58 @@
 
 
 
-#new_product
-{
-    padding: 20px 0;
+
+// new product section 
+
+#new_product {
+    padding: 40px 0;
+    position: relative;
+
+    h2{
+        font-weight: 700;
+        margin-bottom: 28px;
+        color: $text-color;
+        font-size: 36px;
+    }
+    .new_product_left{
+        position: absolute;
+        left: 9%;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: $white-color;
+        background-color: $primary-color-3;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    .new_product_right{
+        position: absolute;
+        right: 9%;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: $white-color;
+        background-color: $primary-color-3;
+        opacity: 0.3;
+        cursor: pointer;
+        z-index: 9999;
+    }
 }
+
 
 .product{
     @extend %product_item_style;
 }
 
 
-#best_seller .product{
-    margin: 0;
-    margin: 10px 0;
-}
 
+
+// discount section 
 
 #discount{
     background: url(..//images/discount_bg.jpg);
@@ -66,73 +337,231 @@
         right: 0;
         transition: all 1s linear;
     }
+    h3{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 46px;
+        margin-bottom: 8px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .anchor_design{
+        margin-top: 30px;
+    }
+
 }
+.anchor_design{
+   @extend %ancor;
+}
+
+
+// best seller section 
+
+#best_seller{
+    padding: 40px 0;
+    h2{
+        font-weight: 700;
+        font-size: 36px;
+        color: $text-color;
+        margin-bottom: 30px;
+    }
+    .product{
+        margin: 0;
+        margin: 10px 0;
+    }
+    .anchor_design{
+        background-color: $primary-color-1;
+        margin-top: 10px;
+        &:hover{
+            background-color: $primary-color-3;
+        }
+    }
+    
+}
+
+
+
+
+// deals section 
 
 #deals{
-    margin: 30px 0;
-}
-.deals_slider
-{
-    padding: 50px 30px;
-    box-shadow: $box-shadow-2;
-}
-.deals_slider_content{
-    background-position: center;
-    background-size: cover;
-    margin: 0 10px;
-    height: 485px;
-    position: relative;
-    z-index: 99;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 50%;
-        bottom: 0;
-        left: 50%;
-        opacity: 1;
-        background: rgba(255, 255, 255, 0.5);
-        z-index: -1;
+    padding: 40px 0;
+    h2{
+        font-weight: 700;
+        font-size: 36px;
+        color: $text-color;
+        margin-bottom: 20px;
     }
-    &:hover::before{
-        left: 0;
-        right: 0;
-        opacity: 0;
-        transition: all 2s linear;    
+    #deals_timer{
+        box-shadow: $box-shadow-2;
+        padding: 10px 30px;
+        transform: translateY(50%);
+        background-color: $white-color;
+        z-index: 99;
+        border-radius: 20px;
+        .deals_timer_param{
+            font-weight: 500;
+            font-size: 20px;
+            color: $text-color;
+        }
+        small{
+            font-size: 30px;
+            color: $primary-color-1;
+        }
+       
     }
-    &::after{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        right: 0;
-        bottom: 50%;
-        opacity: 1;
-        background: rgba(255, 255, 255, 0.5);
-        z-index: -1;
+    .deals_slider{
+        padding: 75px 40px;
+        box-shadow: $box-shadow-2;
+        position: relative;
+        .deals_slider_content{
+            background-position: center;
+            background-size: cover;
+            margin: 0 15px;
+            height: 485px;
+            padding: 40px 35px;
+            position: relative;
+            z-index: 99;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 50%;
+                bottom: 0;
+                left: 50%;
+                opacity: 1;
+                background: rgba(255, 255, 255, 0.5);
+                z-index: -1;
+            }
+            &:hover::before{
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: all 2s linear;    
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                right: 0;
+                bottom: 50%;
+                opacity: 1;
+                background: rgba(255, 255, 255, 0.5);
+                z-index: -1;
+            }
+            &:hover::after{
+                top: 0;
+                bottom: 0;
+                opacity: 0;
+                transition: all 2s linear;
+            }
+            h6{
+                font-weight: 600;
+                font-size: 18px;
+                color: $text-color;
+                margin-bottom: 10px;
+            }
+            h2{
+                font-weight: 700;
+                font-size: 36px;
+                color: $text-color;
+                margin-bottom: 16px;
+            }
+            p{
+                font-size: 16px;
+                color: $text-color;
+                margin-bottom: 20px;
+            }
+            ins{
+                font-size: 16px;
+                color: $text-color;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            del{
+                font-size: 16px;
+                opacity: 0.7;
+                color: $paragraph-color;
+                font-weight: 600;
+                
+            }
+            .anchor_design{
+                background-color: $primary-color-3;
+                margin-top: 30px;
+                &:hover{
+                    background-color: $primary-color-2;
+                    letter-spacing: 0px;
+                }
+            }
+            
+        }
+        .deal_dots{
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            li{
+                button{
+                    font-size: 0;
+                    border: none;
+                    width: 10px;
+                    height: 6px;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    background-color: $gray-color-2;
+                }
+                &.slick-active button{
+                    background-color: $primary-color-3;
+                    width: 26px;
+                }
+            }
+        }
     }
-    &:hover::after{
-        top: 0;
-        bottom: 0;
-        opacity: 0;
-        transition: all 2s linear;
-    }
+    
 }
 
-#deals_timer{
-    box-shadow: $box-shadow-2;
-    padding: 15px 5px;
-    transform: translateY(50%);
-    background-color: $white-color;
-    z-index: 999;
-    border-radius: 20px;
-}
 
+
+
+// special offer section 
 
 #special_offer{
     background-color: $bg-color;
     position: relative;
     height: 517px;
+    .special_offer_info{
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        h5{
+            font-weight: 400;
+            font-size: 16px;
+            color: $paragraph-color;
+        }
+        h2{
+            font-weight: 700;
+            font-size: 36px;
+            color: $text-color;
+            padding: 10px 0;
+        }
+        p{
+            font-size: 16px;
+            color: $paragraph-color;
+            
+        }
+        .anchor_design{
+            background-color: $primary-color-1;
+            margin-top: 20px;
+            &:hover{
+                background-color: $text-color;
+            }
+        }
+    }
     .special_offer_content {
         position: absolute;
         height: 100%;
@@ -158,6 +587,7 @@
             background-color: $white-color;
             z-index: 999;
             box-shadow: $box-shadow-2;
+            cursor: pointer;
             &::after{
                 content: '';
                 position: absolute;
@@ -168,6 +598,37 @@
                 z-index: -1;
                 animation: pulse 2s infinite alternate linear;
             }
+        }
+        .overlay{
+            position: absolute;
+            inset: 0;
+            .front{
+                width: 100%;
+                height: 0%;
+                background-color: #ffffff71;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: 2s ease;
+            }
+            .back{
+                width: 0%;
+                height: 100%;
+                background-color: #ffffff71;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                transition: 2s ease;
+            }            
+        }
+        &:hover .front{
+            height: 100%;
+            opacity: 0;
+        }
+        &:hover .back{
+            width: 100%;
+            opacity: 0;
         }
     }
 }
@@ -193,67 +654,127 @@
 }
 
 
+// video modal section 
 
+
+// #modal{
+//     position: fixed;
+//     inset: 0;
+//     z-index: 99999999999999999999999999999999999999999;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     opacity: 0;
+//     transition: 0.5s;
+//     visibility: hidden;
+// }
+// #modal.active{
+//     opacity: 1;
+//     visibility: visible;
+// }
+// #modal .content{
+//     width: 500px;
+//     height: 500px;
+//     background-color: $black-color;
+//     border-radius: 10px;
+//     transform: scale(0);
+//     transition: 0.3s;
+// }
+// #modal iframe{
+//     width: 100%;
+//     height: 100%;
+// }
+
+// #modal .content button{
+//     cursor: pointer;
+//     padding: 10px 15px;
+//     border-radius: 10px;
+//     font-size: 16px;
+//     color: #180202;
+//     background: #e8dbdb;
+// }
+
+// #modal.active .content{
+//     transform: scale(1);
+// }
+
+
+
+
+
+
+
+// blog section 
 
 
 #blog{
     padding: 40px 0;
-    margin-bottom: 100px;
-}
-.blog_item{
-    width: fit-content;
     position: relative;
-    .overlay{
-        position: absolute;
-        inset: 0;
-        .front{
-            width: 100%;
-            height: 0%;
-            background-color: #ffffff71;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: 2s ease linear;
+    h2{
+        font-size: 30px;
+        color: $text-color;
+        padding-bottom: 40px;
+        font-weight: 700;
+    }
+    .blog_slider{
+        padding: 10px 0;
+        .blog_item{
+            padding: 20px;
+            margin: 10px 12px;
+            box-shadow: $box-shadow-2;
+            z-index: 99;
+            
+            a{
+                color: $text-color;
+                font-weight: 600;
+                font-size: 20px;
+                &:hover{
+                    color: $primary-color-1;
+                }
+            }
+            small{
+                color: $paragraph-color;
+                font-size: 16px;
+            }
+            p{
+                color: $paragraph-color;
+                font-size: 16px;
+                line-height: 28px;
+            }
         }
-        .back{
-            width: 0%;
-            height: 100%;
-            background-color: #ffffff71;
+        .blog_dots{
             position: absolute;
+            bottom: -5%;
             left: 50%;
-            top: 0;
             transform: translateX(-50%);
-            transition: 2s ease;
-        }        
+            display: flex;
+            li{
+                button{
+                    font-size: 0;
+                    border: none;
+                    width: 10px;
+                    height: 6px;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    background-color: $gray-color-2;
+                }
+                &.slick-active button{
+                    background-color: $primary-color-3;
+                    width: 26px;
+                }
+            }
+        }
     }
-    &:hover .front{
-        height: 100%;
-        opacity: 0;
-    }
-    &:hover .back{
-        width: 100%;
-        opacity: 0;
-    }
+    
 }
 
 
-#navigation.active{
-    animation-name: fixedMenu;
-    animation-duration: .8s;
-    animation-fill-mode: forwards;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    border-bottom: 1px dotted $primary-color-2;
-}
-@keyframes fixedMenu {
-    from{
-        top: -100px;    
-    }
-    to{
-        top: 0;
-    }
-}
+
+
+
+
+
+
 
 
 /* backto top section  */

@@ -1,5 +1,7 @@
 
 
+// bandcom section 
+
 #bandcamb{
     background: url(..//images/breadcumb_bg_about.png);
     background-position: center;
@@ -15,17 +17,30 @@
         background: rgba(0,0,0,0.5);
         z-index: -1;
     }
+    h2{
+        font-weight: 700;
+        font-size: 48px;
+        margin-bottom: 16px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+    }
 }
 
 
+
+
+
+//  shop section 
+
 #about_shop{
     margin: 50px 0;
-    padding: 50px 0;
+    padding: 20px 0;
     position: relative;
     z-index: 1;
     .about_img{
         position: relative;
-        
         &::before{
             content: '';
             position: absolute;
@@ -44,9 +59,42 @@
         right: 0;
         background-color:$bg-color;
         height: 100%;
-        width: calc(100% - 110px);
+        width: 100%;
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
         z-index: -1;
+    }
+    .about_shop_content h2{
+        font-weight: 700;
+        font-size: 36px;
+        color: $text-color;
+        margin-bottom: 10px;
+    }
+    .about_shop_content p{
+        font-weight: 400;
+        font-size: 16px;
+        color: $text-color;
+        line-height: 28px;
+        padding-bottom: 20px;
+    }
+    ul{
+        padding-top: 20px;
+        li{
+            font-weight: 400;
+            font-size: 16px;
+            color: $paragraph-color;
+            margin-bottom: 10px;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+    .anchor_design{
+        margin-top: 34px;
+        background-color: $primary-color-1;
+        &:hover{
+            background-color: $primary-color-3;
+            letter-spacing: 0;
+        }
     }
 }
 @keyframes moving{
@@ -54,7 +102,7 @@
         transform: translateX(0);
     }
     50%{
-        transform: translateX(46px);
+        transform: translateX(50px);
     }
     100%{
         transform: translateX(0);
@@ -63,15 +111,59 @@
 
 
 
+// achievement  counter section 
+
+#achievement{
+    padding: 90px 0;
+    i{
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background-color: $bg-color;
+        color: $primary-color-1;
+        border-radius: 50%;
+        font-size: 22px;
+        display: block;
+        margin: auto;
+    }
+    span{
+        font-weight: 700;
+        font-size: 36px;
+        color: $primary-color-1;
+        padding: 20px 0;
+    }
+    p{
+        font-size: 16px;
+        color: $paragraph-color;
+    }
+}
+
+
+
+
+// our story section starts here 
+
 #our_story{
     background-color: $bg-color;
     position: relative;
     height: 520px;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    h2{
+        font-size: 36px;
+        color: $text-color;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+    p{
+        font-size: 16px;
+        color: $paragraph-color;
+        font-weight: 400;
+    }
     .story_content{
         position: absolute;
         inset: 0 0 0 50%;
-        
         img{
             width: 100%;
             height: 100%;
@@ -91,7 +183,7 @@
             text-align: center;
             border-radius: 50%;
             background-color: $white-color;
-            z-index: 999;
+            z-index: 99;
             box-shadow: $box-shadow-2;
             &::after{
                 content: '';
@@ -136,44 +228,180 @@
         }
     }
 }
+// our story secvtion ends here 
 
 
-
-
-
-
-
-
-
-
-
-
+// promotion section 
 
 #promotion{
-    margin: 30px 0;
-    color: $primary-color-1;
+    padding: 50px 0;
+}
+
+// promotion section ends here 
+
+
+// team section 
+
+#team{
+    padding: 60px 0;
+    .team_container{
+        position: relative; 
+    }
+    h2{
+        font-size: 36px;
+        font-weight: 700;
+        color: $text-color;
+        padding-bottom: 25px;
+    }
     
-    .promotion_item{
-        background-color: #fff;
-        box-shadow: 0px 0px 50px rgba(21, 26, 50, 0.1);
-        padding: 20px 30px;
+    .team_slider_item{
+        box-shadow: $box-shadow-2;
+        margin: 5px 12px;
+        h6{
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            padding: 6px 0;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            padding-bottom: 6px;
+            color: $primary-color-1;
+        }
+        span{
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: center;
+            i{
+                color: $text-color;
+                margin: 0 5px;
+                width: 20px;
+                height: 20px;
+                transition: 0.3s;
+                &:hover{
+                    color: $primary-color-1;
+                }
+            }
+            
+        }
+        
+    }
+    .team_left{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: $text-color;
+        border-radius: 50%;
+        background-color: $background-color;
+        z-index: 99;
+        transition: 0.5s;
+        &:hover{
+            color: $white-color;
+            background-color: $primary-color-1;
+        }
+        
+    }
+    .team_right{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: $text-color;
+        border-radius: 50%;
+        background-color: $background-color;
+        z-index: 99;
+        transition: 0.5s;
+        &:hover{
+            color: $white-color;
+            background-color: $primary-color-1;
+        }
     }
 }
 
+// team section ends 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// testimonial section 
+
 #testimonial{
-    margin: 50px 0;
+    padding: 60px 0;
     position: relative;
     img{
         border-radius: 50%;
     }
-
+    .test_top img{
+        padding-bottom: 10px;
+    }
 }
 
-.testimonial_slider p{
-    width: 400px;
-    display: block;
-    margin: 0 auto;
+.testimonial_slider {
+    position: relative;
+    p{
+        width: 570px;
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 28px;
+        color: $paragraph-color;
+        padding: 10px 0;
+    }
+    h5{
+        font-weight: 700;
+        color: $text-color;
+        font-size: 24px;
+    }
+    h6{
+        font-size: 16px;
+        color: $primary-color-1;
+    }
+    .testimonial_dots{
+        position: absolute;
+        bottom: -8%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        li{
+            button{
+                font-size: 0;
+                border: none;
+                width: 10px;
+                height: 6px;
+                border-radius: 5px;
+                margin-right: 5px;
+                background-color: $gray-color-2;
+            }
+            &.slick-active button{
+                background-color: $primary-color-1;
+                width: 26px;
+            }
+        }
+    }
 }
+
 
 .test_animate_slider {
     position: sticky;
@@ -271,11 +499,49 @@
     }
 }
 
+// testimonial section ends here 
+
+
+
+
+
+
+// instagram section 
+
 
 #instagram{
     padding: 50px 0;
     h3{
         text-align: center;
+        padding-bottom: 25px;
+        font-weight: 700;
+        font-size: 36px;
+        color: $text-color;
+    }
+    .instagram_slider{
+        position: relative;
+        .instagram_dots{
+            position: absolute;
+            bottom: -12%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            li{
+                button{
+                    font-size: 0;
+                    border: none;
+                    width: 10px;
+                    height: 6px;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    background-color: $gray-color-2;
+                }
+                &.slick-active button{
+                    background-color: $primary-color-1;
+                    width: 26px;
+                }
+            }
+        }
     }
     .instagram_slider_item{
         position: relative;
@@ -283,14 +549,18 @@
         .overlay{
             position: absolute;
             inset: 0;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.6);
             text-align: center;
             transition: 0.68s;
             transform: scale(0);
             i{
                 font-size: 20px;
-                color: #fff;
+                color: $white-color;
                 cursor: pointer;
+                transition: all linear 0.4s;
+                &:hover{
+                    color: $primary-color-1;
+                }
             }
         }
         &:hover .overlay{
@@ -300,10 +570,116 @@
 
 }
 
+// instagram slider section ends 
+
+
+
+
+
+
+
+
+// footer section starts here 
 
 #footer{
     background: $background-color;
-    padding: 40px 0;
+    padding: 100px 0 0;
+    .footer_top{
+        border-bottom: 1px dotted $primary-color-3;
+        padding-bottom: 60px;
+        h2{
+            font-weight: 700;
+            font-size: 36px;
+            color: $text-color;
+            padding-bottom: 10px;
+        }
+        p{
+            font-size: 16px;
+            color: $paragraph-color;
+        }
+        input{
+            padding: 10px 15px;
+            border: none;
+            background-color: $white-color;
+            width: 60%;
+        }
+        button{
+            background-color: $primary-color-1;
+            margin-left: -5px;
+            padding: 10px 30px;
+            &:hover{
+                letter-spacing: 0;
+                background-color: $text-color;
+            }
+        }
+    }
+    .footer_info{
+        padding: 60px 0;
+        .footer_logo{
+            padding-bottom: 25px;
+        }
+        h3{
+            font-weight: 700;
+            font-size: 24px;
+            color: $text-color;
+            padding-bottom: 30px;
+        }
+        .footer_info_icon a{
+            color: $paragraph-color;
+            font-size: 30px;
+            margin-right: 26px;
+            transition: all linear 0.4s;
+            &:hover{
+                color: $primary-color-1;
+            }
+        }
+        .footer_info_first_p{
+            font-size: 16px;
+            color: $paragraph-color;
+            padding-bottom: 20px;
+        }
+        .foot_info_li a{
+            font-size: 16px;
+            color: $paragraph-color;
+            padding-bottom: 3px;
+            font-weight: 400;
+            transition: all linear 0.4s;
+            &:hover{
+                color: $primary-color-1;
+            }
+            i{
+                font-size: 10px;
+            }
+        }
+        .contact_item a{
+            font-size: 16px;
+            color: $paragraph-color;
+            padding-bottom: 3px;
+            font-weight: 400;
+            transition: all linear 0.4s;
+            &:hover{
+                color: $primary-color-1;
+            }
+        }
+        .contact_item i{
+            font-size: 24px;
+            color: $primary-color-1;
+            margin-right: 8px;
+        }
+    }
+
+    .footer_last{
+        padding: 15px 0;
+        color: $paragraph-color;   
+        border-top: 1px dotted $primary-color-3; 
+        p{
+            font-size: 16px;
+            a{
+                color: $primary-color-1;
+                margin: 0 5px;
+            }
+        }
+    }
 }
 
 

@@ -1,6 +1,44 @@
 #banner
 {
     padding: 0 30px;
+    h4{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 64px;
+        margin: 14px 0 17px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    a{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 13px 20px;
+    color: $white-color;
+    background-color: $primary-color-1;
+    // border: transparent;
+    transition: 0.5s;
+    i{
+        font-size: 10px;
+        margin-left: 4px;
+    }
+    
+    &:hover{
+    background-color: $white-color;
+    color: $primary-color-1;
+    border-radius: 10px;
+    word-spacing: 2px;
+    // border: 1px dotted $text-color;
+    }
+    }
+
+
+
     .banner_slider_item{
         height: 700px;
         background-size: cover !important;
@@ -21,10 +59,11 @@
         }
         
     }
+
     .banner_slider_dots{
         position: absolute;
-        bottom: 30%;
-        left: 6%;
+        bottom: 25%;
+        left: 4%;
         display: flex;
         li{
             button{
